@@ -1,10 +1,10 @@
 #include<stdio.h>
 
-int x = 100;
+int x = 100; //extern variable
 
 //Take x=20 in local scope
 void scope1() {
-    int x = 20;
+    //int x = 20;
     printf("Value of x in scope1 is = %d\n", x);
     return;
 }
@@ -17,10 +17,12 @@ void scope2() {
 
 //Take x=0 in local scope
 int main() {
-    int x = 0;
+    //int x = 0;
     printf("Value of x in main is = %d\n", x);
     scope1();
     scope2();
+    x = 50;
+    scope1();
 
     return 0;
 }
